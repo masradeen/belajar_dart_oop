@@ -17,6 +17,13 @@ class Person {
   }
 }
 
+//extension method -- menambah method tanpa harus ganti di class nya
+extension SayGoodByeOnPerson on Person {
+  void sayGoodBye(String paramName) {
+    print("Good Bye $paramName, from $name");
+  }
+}
+
 void main(){
 
   var person1 = Person();
@@ -30,6 +37,7 @@ void main(){
   person1.sayHello("Budi");
   person1.hello();
   person1.getName();
+  person1.sayGoodBye("Joko");
 
   Person person2 = Person();
   print(person2);
