@@ -10,8 +10,14 @@ class Car {
   }
 }
 
-class Avanza implements Car {
+abstract class HashBrand {
+  String getBrand();
+}
+
+class Avanza implements Car, HashBrand { //multiple inheritance interface
   String name = 'Avanza';
+
+  String getBrand() => 'Toyota';
 
   void drive(){
     print('Avanza is running');
